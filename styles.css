@@ -147,12 +147,19 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    min-height: 100vw;
     background-color: #171717;
     opacity: 0;
 }
 
 .js .projects__images img {
+    display: none;
+}
+
+.js .projects__images img:first-child {
+    display: block;
+}
+
+.js .projects__images canvas {
     display: none;
 }
 
@@ -279,6 +286,13 @@ body {
     .projects__images {
         width: 50%;
         min-height: auto;
+    }
+
+    .js .projects__images img:first-child {
+        display: none;
+    }
+    .js .projects__images canvas {
+        display: block;
     }
 
     .projects__info {
