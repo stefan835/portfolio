@@ -59,7 +59,8 @@ body {
     padding: 15px;
     background-color: #171717;
     list-style: none;
-    border-left: 5px transparent solid
+    border-left: 5px transparent solid;
+    margin-left: -5px;
 }
 
 .nav-bar__link {
@@ -270,6 +271,7 @@ body {
 
     .nav-bar__list-item {
         border: none;
+        margin-left: 0;
     }
 
     .nav-bar__list-item:hover {
@@ -291,6 +293,7 @@ body {
     .js .projects__images img:first-child {
         display: none;
     }
+
     .js .projects__images canvas {
         display: block;
     }
