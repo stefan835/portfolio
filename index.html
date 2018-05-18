@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
           integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css"/>
+    <script>document.documentElement.className = "js";
+    var supportsCssVars = function () {
+      var e, t = document.createElement("style");
+      return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+    };
+    supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -58,7 +64,11 @@
         <h1>Projects</h1>
         <div class="projects">
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image1.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image1.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image2.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>Interior designer's landing page</h2>
                     <div class="projects__icons">
@@ -80,7 +90,11 @@
                 </div>
             </div>
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image5.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image5.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image6.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>Price comparison app</h2>
                     <div class="projects__icons">
@@ -102,7 +116,11 @@
                 </div>
             </div>
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image3.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image3.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image4.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>Simple catching game</h2>
                     <div class="projects__icons">
@@ -124,7 +142,11 @@
                 </div>
             </div>
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image7.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image7.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image8.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>Shopping list app</h2>
                     <div class="projects__icons">
@@ -145,7 +167,11 @@
                 </div>
             </div>
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image9.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image9.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image10.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>App's landing page</h2>
                     <div class="projects__icons">
@@ -166,7 +192,11 @@
                 </div>
             </div>
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image11.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image11.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image12.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>Img to HTML</h2>
                     <div class="projects__icons">
@@ -187,7 +217,11 @@
                 </div>
             </div>
             <div class="projects__item">
-                <img class="projects__image" src="img/projects/image13.jpg" alt="project_image"/>
+                <div class="projects__images" data-displacement="img/displacement/8.jpg" data-intensity="-0.65"
+                     data-speedIn="1.2" data-speedOut="1.2">
+                    <img class="projects__image" src="img/projects/image13.jpg" alt="project_image"/>
+                    <img class="projects__image" src="img/projects/image14.jpg" alt="project_image"/>
+                </div>
                 <div class="projects__info">
                     <h2>Tasks for primary school kid</h2>
                     <div class="projects__icons">
@@ -215,6 +249,30 @@
         src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
         crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script src="js/introAnimation.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="js/hover.js"></script>
+<script>
+  imagesLoaded(document.querySelectorAll('img'), () => {
+    document.body.classList.remove('loading');
+  });
+
+  Array.from(document.querySelectorAll('.projects__images')).forEach((el) => {
+    const imgs = Array.from(el.querySelectorAll('img'));
+    new hoverEffect({
+      parent: el,
+      intensity: el.dataset.intensity || undefined,
+      speedIn: el.dataset.speedin || undefined,
+      speedOut: el.dataset.speedout || undefined,
+      easing: el.dataset.easing || undefined,
+      hover: el.dataset.hover || undefined,
+      image1: imgs[0].getAttribute('src'),
+      image2: imgs[1].getAttribute('src'),
+      displacementImage: el.dataset.displacement
+    });
+  });
+</script>
 </body>
 </html>

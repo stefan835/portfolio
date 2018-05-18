@@ -139,16 +139,26 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto 20px;
+    margin-bottom: 20px;
+}
+
+.projects__images {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    min-height: 100vw;
+    background-color: #171717;
+    opacity: 0;
+}
+
+.js .projects__images img {
+    display: none;
 }
 
 .projects__image {
     width: 100%;
-    height: auto;
-    opacity: 0;
-
+    height: 100%;
 }
 
 .projects__info {
@@ -161,8 +171,9 @@ body {
     opacity: 0;
     text-align: justify;
     padding: 30px;
-    width: calc(100% - 60px);
+    width: 100%;
     font-size: 0.6rem;
+    box-sizing: border-box;
 }
 
 .projects__icons {
@@ -259,26 +270,29 @@ body {
     }
 
     .projects__item {
-        width: 100%;
         display: flex;
+        max-height: 575px;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
+        margin-bottom: 0;
     }
 
-    .projects__image {
+    .projects__images {
         width: 50%;
-        height: auto;
+        min-height: auto;
     }
 
     .projects__info {
-        height: 325px;
+        height: 365px;
         padding: 20px 40px;
         font-size: 0.7rem;
+        width: 50%;
     }
 
-    .projects__item:nth-child(2n) .projects__image {
+    .projects__images {
+        height: 365px;
+    }
+
+    .projects__item:nth-child(2n) .projects__images {
         order: 1;
     }
 }
@@ -289,9 +303,13 @@ body {
     }
 
     .projects__info {
-        height: 435px;
+        height: 475px;
         padding: 20px 40px;
         font-size: 1rem;
+    }
+
+    .projects__images {
+        height: 475px;
     }
 }
 
@@ -301,7 +319,11 @@ body {
     }
 
     .projects__info {
-        height: 535px;
+        height: 575px;
         font-size: 1.1rem;
+    }
+
+    .projects__images {
+        height: 575px;
     }
 }
