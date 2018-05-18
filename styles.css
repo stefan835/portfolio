@@ -56,7 +56,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 15px;
+    padding: 15px 0;
     background-color: #171717;
     list-style: none;
     border-left: 5px transparent solid;
@@ -272,6 +272,7 @@ body {
     .nav-bar__list-item {
         border: none;
         margin-left: 0;
+        padding: 15px;
     }
 
     .nav-bar__list-item:hover {
